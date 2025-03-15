@@ -1,5 +1,4 @@
 name: Deploy KrakenD API Gateway
-#Commit
 
 on:
   push:

@@ -1,4 +1,7 @@
 # Logs
+ops-app/.env
+ops-app/secrets.properties
+.env
 logs
 *.log
 npm-debug.log*

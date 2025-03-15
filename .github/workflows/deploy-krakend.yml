@@ -1,4 +1,5 @@
 name: Deploy KrakenD API Gateway
+#Commit
 
 on:
   push:
@@ -9,7 +10,7 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
 
-    steps:
+    steps: 
       - name: Checkout Repository
         uses: actions/checkout@v3
 

@@ -37,5 +37,5 @@ jobs:
           server: "${{ secrets.CAPROVER_SERVER }}"
           app: "${{ secrets.KRAKEND_CAPROVER_APP_NAME }}"
           token: "${{ secrets.KRAKEND_CAPROVER_TOKEN }}"
-          image: "${{ secrets.DOCKER_IMAGE_NAME }}"
+          image: "edgars/krakend-gw-sample:latest"
 

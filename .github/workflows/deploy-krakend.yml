@@ -15,11 +15,13 @@ jobs:
 
       - name: Notifying QAP Admin Api - Starting Login in Docker
         run: |
-          curl -X POST \
-            -H "Content-Type: application/json" \
-            -d '{"api_name": "Sample API", "status": "LOGIN_IN_DOCKER", "final_endpoint_host" : "https://webhook.site/a1abf43f-52ac-4267-b3a1-d7ff6b667675"
-                }' \
-            https://example.com/api/endpoint
+          curl --location 'https://webhook.site/a1abf43f-52ac-4267-b3a1-d7ff6b667675' \
+            --header 'Content-Type: application/json' \
+            --data '{
+              "api_name": "Sample API",
+              "status": "LOGIN_IN_DOCKER",
+              "final_endpoint_host": "${{ secrets.KRAKEND_URL_APIGATEWAY }}"
+            }'
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3

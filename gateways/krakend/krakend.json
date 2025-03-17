@@ -6,6 +6,24 @@
     "cache_ttl": "300s",
     "endpoints": [
         {
+            "endpoint": "/v1/css-colors",
+            "method": "GET",
+            "@comment": "teste",
+            "output_encoding": "no-op",
+            "backend": [
+              {
+                "url_pattern": "/csscolornames/colors",
+                "encoding": "no-op",
+                "sd": "static",
+                "method": "GET",
+                "host": [
+                  "https://api.sampleapis.com"
+                ],
+                "disable_host_sanitize": false
+              }
+            ]
+          },
+        {
             "endpoint": "/v1/cartoons",
             "method": "GET",
             "@comment": "teste",
